@@ -1,6 +1,6 @@
 # Copy Model Tree Element Name To Clipboard
 
-This application enables to copy the name of a selected model tree element to the clipboard in [PTC](https://www.ptc.com/)'s CAD system [Creo Parametric](https://www.ptc.com/en/products/cad/creo/parametric) (formerly known as Pro/ENGINEER).
+This application allows to copy the name of a selected model tree element to the clipboard in [PTC](https://www.ptc.com/)'s CAD system [Creo Parametric](https://www.ptc.com/en/products/cad/creo/parametric) (formerly known as Pro/ENGINEER).
 
 ## Getting Started
 
@@ -10,8 +10,10 @@ The latest version of the UDL files can be downloaded from https://github.com/Do
 
 ### Installing
 
-1. Copy the file CopyModelTreeElementNameToClipboard.exe to a directory of your choice (e.g. C:\temp).
-2. Create a new OS script mapkey: "%DirectoryOfYourChoice%\CopyModelTreeElementNameToClipboard.exe" "%DirectoryContainingTrailFiles%" (e.g. "C:\temp\CopyModelTreeElementNameToClipboard.exe" "C:\temp\TrailDir").
+1. Copy the file CopyModelTreeElementNameToClipboard.exe to a directory of your choice:
+   - E.g. C:\temp
+2. Create a new "OS Script" mapkey: `"%DirectoryOfYourChoice%\CopyModelTreeElementNameToClipboard.exe" "%DirectoryContainingTrailFiles%"`:
+   - E.g. `"C:\temp\CopyModelTreeElementNameToClipboard.exe" "C:\temp\TrailDir"`
 
 ### Usage
 
