@@ -14,14 +14,17 @@ Func Main()
 EndFunc
 
 Func CommandLineParametersVerify()
+	Local $sTrailDir
 	If $cmdLine[0] = 0 Then
 		ConsoleWrite("Trail directory not passed." & @CRLF)
 		Exit
 	ElseIf Not FileExists($cmdLine[1]) Then
-		ConsoleWrite("Trail directroy not found." & @CRLF)
-		Exit
+		ConsoleWrite("Trail directory not found, use working directory instead." & @CRLF)
+		$sTrailDir = @WorkingDir
+	Else
+		$sTrailDir = $cmdLine[1]
 	EndIf
-	Return $cmdLine[1]
+	Return $sTrailDir
 EndFunc
 
 Func LatestTrailFileGet(Const ByRef $sTrailDir)
