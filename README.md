@@ -14,6 +14,8 @@ The latest version of the UDL files can be downloaded from https://github.com/Do
    - E.g. C:\temp
 2. Create a new "OS Script" mapkey: `"%DirectoryOfYourChoice%\CopyModelTreeElementNameToClipboard.exe" "%DirectoryContainingTrailFiles%"`:
    - E.g. `"C:\temp\CopyModelTreeElementNameToClipboard.exe" "C:\temp\TrailDir"`
+   - E.g. `"C:\temp\CopyModelTreeElementNameToClipboard.exe" "C:\temp\TrailDir" /noext`
+   - The optional second command line parameter `/noext` removes any file name extensions that may occur, such as ".PRT" or ".ASM".
 
 ### Usage
 

@@ -9,6 +9,9 @@ Func Main()
 	Local $sTrailDir = CommandLineParametersVerify()
 	Local $sTrailFile = LatestTrailFileGet($sTrailDir)
 	Local $sElementName = SelectedElementNameGet($sTrailFile)
+	If $CmdLine[0] = 2 And $CmdLine[2] = "/noext" Then
+		RemoveExtension($sElementName)
+	EndIf
 	ConsoleWrite('Element name: "' & $sElementName & '"' & @CRLF)
 	ClipPut($sElementName)
 EndFunc
@@ -65,4 +68,12 @@ Func SelectedElementNameGet(Const ByRef $sTrailFile)
 	EndIf
 	FileClose($hFile)
 	Return $sSelectedElementName
+EndFunc
+
+Func RemoveExtension(ByRef $sElementName)
+	Local $sDrive = "", $sDir = "", $sFileName = "", $sExtension = ""
+	_PathSplit($sElementName, $sDrive, $sDir, $sFileName, $sExtension)
+	If $sExtension Then
+		$sElementName = StringTrimRight($sElementName, StringLen($sExtension))
+	EndIf
 EndFunc
